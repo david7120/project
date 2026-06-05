@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-List</title>
+    <link rel="stylesheet" href="project-1.css">
+
+
+</head>
+
+<body>
+    <div class="div-box">
+        <h1> Interactive Student List</h1>
+        <h2>Student List :</h2>
+
+
+        <!-- input text box -->
+        <input type="text" id="inputtext" placeholder="Enter value">
+
+        <!--empty or not find error  -->
+        <p id="Error"></p>
+
+        <!-- Add the button -->
+        <button class="add" onclick="Addtext()">Add</button>
+
+        <ul id="Outputtext"></ul>
+        <br>
+
+        <!-- student list update the count -->
+        <p id="count">Count : 0</p>
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    //keypress the event for enter key
+    document.
+        addEventListener("keypress", (event) => {
+            if (event.key === "Enter") {
+                console.log("List item pressed: " + event.target.value);
+                event.preventDefault(); // Prevent form submission
+                Addtext(); // Call the Addtext function
+            }
+        });
+
+    function Addtext() {
+        var name = document.getElementById('username').value;
+        var text = document.getElementById('inputtext').value;
+        console.log(text)
+
+        //  the set if contision empty or not
+        if (text === "" || name=== "") {
+            document.getElementById('Error').textContent = "Please Enter the value";
+            return;
+        }
+        document.getElementById("Error").textContent = "";
+
+
+    
+
+        //delete the text content for input text
+        li.innerHTML = text + "<button class='delete-btn' onclick = 'this.parentElement.remove(); updateCount()'> Delete</button>";
+
+        //append the list text
+        document.getElementById('Outputtext').appendChild(li);
+
+        // return input value in text
+        document.getElementById('inputtext').value = ""
+    }
+</script>
