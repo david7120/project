@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Web</title>
+    <link rel="stylesheet" href="note-web.css">
+    <script src="note-web.js"></script>
+</head>
+
+<body>
+    <div class="note-container">
+        <h1>Note web </h1>
+        <!-- Input fields -->
+        <input type="text" id="text-input" placeholder="Enter Note Title">
+
+        <!-- Error massage -->
+        <p id="Error"></p>
+
+        <!-- Text area content -->
+        <textarea name="text" id="text-area" placeholder="Enter Note Description"></textarea>
+
+        <!-- Error massage -->
+        <p id="Error-area"></p>
+
+        <!-- Add button -->
+        <button id="add-btn" onclick="addclick()">Add</button>
+
+
+        <p class="add-title" id="notes-title"> <!--after adding title--> your notes</p>
+        <div class="add-content" id="add-content"> <!--After adding content-->
+        </div>
+
+    </div>
+
+</body>
+
+</html>
