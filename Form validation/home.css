@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    overflow: hidden;
+    color: white;
+}
+
+.container {
+    width: 400px;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    animation: popup 1s ease;
+}
+
+@keyframes popup {
+
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+h1 {
+    color: lime;
+    margin-bottom: 15px;
+    animation: topdown 1s ease;
+}
+
+h2 {
+    color: cyan;
+    margin-bottom: 15px;
+    word-break: break-word;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 14px 20px;
+    background: rgba(244, 15, 15, 0.901);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+     box-shadow: 0 0 15px rgb(242, 239, 239);
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 15px red;
+
+}
+
+.circle1,
+.circle2 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.circle1 {
+    width: 250px;
+    height: 250px;
+    background: cyan;
+    top: -80px;
+    left: -80px;
+    animation: move1 5s infinite alternate;
+}
+
+.circle2 {
+    width: 250px;
+    height: 250px;
+    background: royalblue;
+    bottom: -80px;
+    right: -80px;
+    animation: move2 5s infinite alternate;
+}
+
+@keyframes move1 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(40px);
+    }
+}
+
+@keyframes move2 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-40px);
+    }
+
+    ;
+}
