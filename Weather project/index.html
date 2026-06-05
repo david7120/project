@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./weather.css">
+
+</head>
+
+<body>
+
+    <div class="weather-card">
+        <h2>Weather Dashboard</h2>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name (e.g., Paris)...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Weather Info Section (Hidden by default) -->
+        <div id="weather-info" class="hidden">
+            <h1 id="city-name">City Name</h1>
+            <p id="description">Sunny</p>
+            <div class="temp-display">
+                <span id="temperature">0</span>°C
+            </div>
+            
+            <div class="details">
+                <div>Wind: <span id="wind">0</span> km/h</div>
+                <div>Humidity: <span id="humidity">0</span>%</div>
+            </div>
+        </div>
+        <!-- Error message -->
+        <p id="error-msg" class="error hidden">City not found. Please try again.</p>
+    </div>
+
+    <script src="./weather.js"></script>
+</body>
+
+</html>
